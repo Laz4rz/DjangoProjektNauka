@@ -1,0 +1,10 @@
+{% extends 'bucketlist/bucketlist_base.html'%}
+{%block content%}
+
+    <form action="/your-name/" method="post" id="formularz">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+    </form>
+
+{%endblock content%}

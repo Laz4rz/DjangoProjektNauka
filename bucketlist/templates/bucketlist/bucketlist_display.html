@@ -1,0 +1,10 @@
+{% extends "bucketlist/bucketlist_base.html" %}
+{% block content %}
+    {% for droplet in droplets %}
+        <article class="droplet">
+            <p id="article_title">{{droplet.title}}</p>
+            <p id="article_text">{{droplet.content}}</p>
+        </article>
+    {% endfor %}
+    {{test}}
+{% endblock content %}
