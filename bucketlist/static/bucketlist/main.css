@@ -1,6 +1,5 @@
 body{
     background: #205067;
-    display: grid;
 }
 
 article{
@@ -108,5 +107,5 @@ p{
 
 #input_description{
     width: 800px;
-    height: 100px;
+    height: auto;
 }

@@ -1,27 +1,29 @@
 from django.shortcuts import render
+from .models import Post
 from django.http import HttpResponse
 # Create your views here.
 
-posts = [
-    {
-        'author':'CoreyMS',
-        'title':'BlogPost1',
-        'content':'First post content',
-        'date_posted':'August 27, 2018'
-    },
-    {
-        'author':'JaneDoe',
-        'title':'BlogPost2',
-        'content':'Second post content',
-        'date_posted':'August 28, 2018'
-    }
-]
+
+#dummy data przed opanowaniem databazy
+# posts = [
+#     {
+#         'author':'CoreyMS',
+#         'title':'BlogPost1',
+#         'content':'First post content',
+#         'date_posted':'August 27, 2018'
+#     },
+#     {
+#         'author':'JaneDoe',
+#         'title':'BlogPost2',
+#         'content':'Second post content',
+#         'date_posted':'August 28, 2018'
+#     }
+# ]
 
 #z uzyciem templatki
 def home(request):
     context = {
-        'title':'Co jest',
-        'posts':posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
